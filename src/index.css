@@ -1,0 +1,120 @@
+/* Variables globales*/
+:root {
+  --font-main: 0.8rem;
+  --font-small: 0.5rem;
+  --font-large: 1rem;
+  --font-xlarge: 1.2rem;
+  /* light */
+  --clr-main: #fffb9d; 
+  --clr-main-2: #fff96a; 
+  --clr-main-3: #fff851; 
+  --clr-main-4: #fffcb7; 
+  --clr-black: #0a0a0a;
+  --clr-black-2: #141300;
+  --clr-black-3:#272600;
+  --clr-font-light:#d2d1ca;
+  --clr-grey: grey;
+  --clr-grey-slate: slategrey;
+  --clr-grey-light: lightgrey;
+  --clr-grey-dark:#3b3b3b;
+  /* dark */
+  --clr-dark-primary: #020253;
+  --clr-dark-font:rgb(68, 162, 194);
+  --clr-dark-font-2:#7f7ffc;
+  --clr-dark-font-3:#6666fb;
+  --clr-dark-font-4:#b1b1fd;
+  /* error */
+  --clr-danger:rgb(255, 3, 3);
+  --clr-danger-light:lightcoral;
+  --clr-danger-dark:darkred;
+
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100vh;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-grow: 1;
+}
+
+#root{
+  display: flex;
+  flex: 1;
+  overflow-x: hidden;
+}
+
+/* Light mode */
+
+.light-mode{
+  background-color: var(--clr-main);
+  color: var(--clr-black);
+}
+
+.light-mode header, footer{
+  background-color: var(--clr-main-4);
+  box-shadow: 0 0 20px var(--clr-black-3);
+}
+
+.light-mode aside{
+  background-color: var(--clr-main-4);
+  border-right: 1px solid black;
+}
+
+.light-mode .side-btn{
+  color: var(--clr-grey);
+}
+
+/* Dark mode */
+
+.dark-mode{
+  background-color: var(--clr-dark-primary);
+  color: var(--clr-dark-font);
+}
+
+.dark-mode header{
+  background-color: var(--clr-black-3);
+  box-shadow: 0 0 20px var(--clr-dark-font-4);
+}
+.dark-mode footer{
+  background-color: var(--clr-black-3);
+  box-shadow: 0px 0 20px var(--clr-dark-font-4);
+}
+.dark-mode aside{
+  background-color: var(--clr-black-3);
+  box-shadow: 0px 0px 20px 0px var(--clr-dark-font-4);
+}
+.dark-mode aside .side-btn{
+  color: white;
+}
+
+
+/* Links */
+
+a {
+  color: inherit;
+  text-decoration: none; 
+}
+
+a:hover,
+a:active {
+  color: inherit; 
+}
+
+
+@media screen and (max-width: 425px) {
+  /* Add your responsive styles here */
+  #root{
+    width: fit-content;
+  }
+}

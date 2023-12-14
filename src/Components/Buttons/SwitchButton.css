@@ -1,0 +1,50 @@
+.switch-button {
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+.switch-button.on {
+  background-color: var(--clr-dark-font-4);
+}
+
+.switch-button.off {
+  background-color: #ccc;
+}
+
+.ball {
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.switch-button.on .ball {
+  background-color: var(--clr-grey);
+  transform: translateX(30px);
+}
+
+@media screen and (max-width: 400px) {
+  .switch-button {
+    width: 40px;
+    height: 20px;
+  }
+  .ball {
+    width: 16px;
+    height: 16px;
+  }
+
+  .switch-button.on .ball {
+    transform: translateX(18px);
+  }
+
+}

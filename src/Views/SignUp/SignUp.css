@@ -1,0 +1,91 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem; 
+  text-align: center;
+}
+
+.sign-up-form {
+  min-width: 40%;
+  background-color: var(--clr-main-4);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.315);
+}
+
+.sign-up-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sign-up-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.sign-up-form input[type="text"],
+.sign-up-form input[type="number"],
+.sign-up-form input[type="email"],
+.sign-up-form input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.label-fail {
+  color: red;
+}
+
+.sign-up-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  margin: 1rem auto; 
+  display: block; 
+  width: 100%;
+}
+
+.sign-up-button:hover {
+  background-color: #0056b3;
+}
+
+.sign-up-form a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s;
+}
+
+.sign-up-form a:hover {
+  color: #0056b3;
+}
+
+.p-login-error {
+  color: var(--clr-danger-dark);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 786) {
+  
+  .sign-up-form{
+    width: 80%;
+  }
+}
+
+.disabled-button {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  /* Add any other styles you want for a disabled button */
+}

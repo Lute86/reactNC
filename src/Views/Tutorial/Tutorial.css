@@ -1,0 +1,20 @@
+.tutorial-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutorial-title{
+  margin: 2rem 0rem;
+}
+
+.tutorial-title h1{
+  
+}
+
+.tutorial-title hr{
+
+}

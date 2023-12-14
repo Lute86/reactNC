@@ -1,0 +1,13 @@
+@import './index.css';
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 1;
+}
+
+.app-content{
+  flex: 1;
+}
+

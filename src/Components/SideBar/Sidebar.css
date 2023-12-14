@@ -1,0 +1,56 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60px;
+  box-sizing: border-box;
+  transition: width 0.3s ease-in-out;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-dark-font);
+}
+
+.sidebar.open {
+  width: 200px;
+}
+/* Rest of the CSS remains the same */
+
+.close-btn, .open-btn {
+  align-self: flex-end;
+  padding-right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}
+
+.side-btn:hover {
+  color: var(--clr-dark-font);
+}
+
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  margin-top: 2rem;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 30px;
+}
+
+.sidebar-nav ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-nav a{
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
