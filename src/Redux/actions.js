@@ -1,7 +1,7 @@
 import { GET_ALL_USERS, GET_USER_BY_ID, CREATE_USER, EDIT_USER } from "./action-types";
 import  axios  from 'axios';
 
-const URL = "http://localhost:4003/"
+const URL = "https://nodenc-dev-nskf.3.us-1.fl0.io/"
 
 export const getAllUsers = () => {
   return async function getUsersThunk(dispatch) {
@@ -15,7 +15,7 @@ export const getAllUsers = () => {
 };
 
 export const getById = (userId) => {
-  const endpoint = `http://localhost:4003/user/${userId}`;
+  const endpoint = `https://nodenc-dev-nskf.3.us-1.fl0.io/user/${userId}`;
   return async (dispatch) => {
     try {
       const { data } = await axios(endpoint);
