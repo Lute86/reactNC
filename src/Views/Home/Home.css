@@ -246,10 +246,11 @@ p {
 .subscription-features {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   width: 100%;
   justify-content: center;
   align-items: center;
+  list-style-type: "\-";
 }
 
 .subscription-features ul {
@@ -336,8 +337,11 @@ p {
   }
 
   .about-us-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-left: 0;
-    margin-top: 3rem;
     order: -1; /* Change the order of the right column */
   }
 
@@ -352,6 +356,7 @@ p {
 
   .values {
     padding: 20px 0;
+    margin-top: 0;
   }
 
   .values-content { 

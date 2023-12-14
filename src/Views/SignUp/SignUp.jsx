@@ -20,6 +20,7 @@ const SignUp = () => {
   const navigate = useNavigate()
   const [errors, setErrors] = useState({});
   const { loggedUser } = useGlobalState()
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setInput((prevInput) => ({
@@ -43,7 +44,7 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    setLoading(true)
     dispatch(createUser(input))
       .then(() => {
         setInput({
@@ -73,6 +74,7 @@ const SignUp = () => {
         }, 0);
       }).finally(()=>{
         setTrigger(0)
+        setLoading(false)
       })
   };
 
@@ -177,7 +179,7 @@ const SignUp = () => {
             errors.confirmPassword
           }
         >
-          Registrarme
+          {loading ? <Spinner/> : "Registrarme"}
         </button>
         {errors.register !== "" && <p className="p-login-error">{errors.register}</p>}
         <p>

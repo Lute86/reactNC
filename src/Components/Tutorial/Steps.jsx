@@ -4,8 +4,9 @@ import { useTutorialState } from "../../Context/tutorialContext";
 function Steps() {
   const { tasks, currentTask} = useTutorialState()
   return (
-    <div>
-      <h2>{tasks[currentTask].step}</h2>
+    <div className="step-div">
+      <h2 className="step-h2">{tasks[currentTask].step}</h2>
+      <hr className="step-hr"/>
       {tasks[currentTask].component}
     </div>
   );

@@ -8,13 +8,108 @@
 }
 
 .tutorial-title{
-  margin: 2rem 0rem;
+  margin: 2rem 0rem;  
 }
 
-.tutorial-title h1{
+.tutorial-div{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tutorial-div p{
+  margin-bottom: 2rem;
+}
+
+.tutorial-registrarme-btn{
+  background-color: var(--clr-dark-font-4);
+  border: none;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 10px black;
+}
+.tutorial-registrarme-btn:hover {
+  background-color: var(--clr-dark-font);
+  box-shadow: 0px 0px 10px white;
+}
+
+.tutorial-section{
+  min-width: 40%;
+  max-width: 70%;
+  background-color: var(--clr-main-4);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.315);
+  margin-bottom: 4rem;
+}
+
+
+/* Step */
+
+.step-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-hr{
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+
+/* Insertion */
+
+.insertion-div{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.insertion-title{
+  margin-bottom: 1rem;
+}
+.insertion-form{
+  display: flex;
+  flex-direction: column;
   
 }
+.insertion-entry{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.insertion-input{
+  height: 1.5rem;
+}
+.insertion-btn{
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.insertion-btn:hover{
+  color: var(--clr-dark-font-3);
+}
+.insertion-p{
+  margin-top: 1rem;
+  color: var(--clr-danger-light);
+}
+.insertion-span{
+  font-weight: bold;
+}
+.insertion-btn-next{
+  height: 2rem;
+  width: 5rem;
+  border-radius: 10%;
+  border: none;
+  background-color: var(--clr-dark-font-4);
+  cursor: pointer;
+}
 
-.tutorial-title hr{
-
+.insertion-btn-next:hover{
+  background-color: var(--clr-dark-font-3);
 }

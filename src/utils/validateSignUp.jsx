@@ -22,8 +22,8 @@ const validate = (input) => {
   }
   if (!input.password) {
     errors.password = "La contraseña es requerida";
-  } else if (!/(?=.*[A-Za-z])(?=.*\d).{6,}/.test(input.password)) {
-    errors.password = "La contraseña debe tener al menos 6 caracteres, 1 numero y una letra.";
+  } else if (!/(?=.*[A-Z])(?=.*\d).{6,}/.test(input.password)) {
+    errors.password = "La contraseña debe tener al menos 6 caracteres, 1 numero y una mayúscula.";
   }
   if (input.password !== input.confirmPassword) {
     errors.confirmPassword = "Las contraseñas no coinciden";

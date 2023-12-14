@@ -98,7 +98,52 @@ body {
   color: white;
 }
 
+.dark-mode .login-form{
+  background-color: var(--clr-grey-dark);
+  box-shadow: 0px 0 20px var(--clr-dark-font-4);
+}
 
+.dark-mode .sign-up-form{
+  background-color: var(--clr-grey-dark);
+  box-shadow: 0px 0 20px var(--clr-dark-font-4);
+}
+
+.dark-mode .p-signup-error{
+  color: var(--clr-danger-light);
+}
+.dark-mode .p-login-error{
+  color: var(--clr-danger-light);
+}
+
+.dark-mode .sign-up-form input{
+  font-weight: bold;
+  background-color: var(--clr-grey);
+}
+.dark-mode .login-form input{
+  font-weight: bold;
+  background-color: var(--clr-grey);
+}
+
+.dark-mode .disabled-button{
+  background-color: var(--clr-grey-light);
+}
+.dark-mode .disabled-button:hover{
+  background-color: var(--clr-grey-slate);
+}
+
+.dark-mode .tutorial-section{
+  background-color: var(--clr-grey-dark);
+  box-shadow: 0px 0 20px var(--clr-dark-font-4);
+}
+
+.dark-mode .insertion-input{
+  font-weight: bold;
+  background-color: var(--clr-grey);
+}
+
+.dark-mode .insertion-btn{
+  background: transparent;
+}
 /* Links */
 
 a {
