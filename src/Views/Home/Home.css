@@ -64,7 +64,7 @@
 
 .bg-img-title {
   color: var(--clr-main);
-  font-size: var(--font-title-xl);
+  font-size: 3rem;
 }
 
 .bg-img-subtitle {
@@ -313,9 +313,9 @@ p {
     overflow: hidden;
   }
 
-  /* .background-section{
-    margin-top: 0;
-   } */
+  .bg-img-title{
+    font-size: 2rem;
+  }
 
   .companies-involved {
     padding: 1rem;

@@ -77,6 +77,10 @@ body {
 
 /* Dark mode */
 
+.dark-mode .bg-img-title{
+  color: var(--clr-dark-font-3);
+}
+
 .dark-mode{
   background-color: var(--clr-dark-primary);
   color: var(--clr-dark-font);
