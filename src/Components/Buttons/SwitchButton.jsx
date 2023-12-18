@@ -3,8 +3,10 @@ import './SwitchButton.css';
 import useLocalStorage from '../../hooks/useLocalStorage';
 
 
-const SwitchButton = ({ onToggle }) => {
-  const [switchIsOn, setswitchIsOn] = useLocalStorage("switch",false);
+const SwitchButton = ({ onToggle, identifier }) => {
+  const [switchIsOn, setswitchIsOn] = identifier
+  ? useLocalStorage(`switch`, false)
+  : useState(false);
 
   const handleClick = () => {
     setswitchIsOn(!switchIsOn);

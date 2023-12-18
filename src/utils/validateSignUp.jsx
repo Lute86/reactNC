@@ -2,12 +2,12 @@ const validate = (input) => {
   let errors = {};
   if (!input.nombre) {
     errors.nombre = "El nombre es requerido";
-  } else if (!/^[a-zA-Z\s]*$/.test(input.nombre)) {
+  } else if (!/^[\p{L}]+$/u.test(input.nombre)) {
     errors.nombre = "El nombre solo puede contener letras";
   }
   if (!input.apellido) {
     errors.apellido = "El apellido es requerido";
-  } else if (!/^[a-zA-Z\s]*$/.test(input.apellido)) {
+  } else if (!/^[\p{L}]+$/u.test(input.apellido)) {
     errors.apellido = "El apellido solo puede contener letras";
   }
   if (!input.dni) {

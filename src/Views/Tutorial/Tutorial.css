@@ -113,3 +113,16 @@
 .insertion-btn-next:hover{
   background-color: var(--clr-dark-font-3);
 }
+
+/* TutorialSwitch */
+
+.tutorial-switch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutorial-switch h3 {
+  margin-bottom: 2rem;
+}

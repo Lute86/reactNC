@@ -21,7 +21,7 @@ function validateEmail(email) {
 }
 
 function validateAlpha(input) {
-  const alphaRegex = /^[A-Za-z]+$/;
+  const alphaRegex = /^[\p{L}]+$/u;  
   return alphaRegex.test(input);
 }
 

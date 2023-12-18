@@ -18,7 +18,7 @@ function Header() {
       <div className='header-title'>
         <h1 className='header-title-h1'><Link to={'/home'}>FinanzApp <span className='header-title-span'>Educa</span></Link></h1>
         <div className='header-buttons'>
-          <SwitchButton onToggle={handleClick}/>
+          <SwitchButton onToggle={handleClick} identifier={"switch"}/>
           <ul className='header-icons'>
             <li><Link to={'#'}><FaGooglePlay size={20}/></Link></li>
             <li><Link to={'#'}><FaApple size={25}/></Link></li>

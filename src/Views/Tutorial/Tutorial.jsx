@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Tutorial.css";
 import Steps from "../../Components/Tutorial/Steps";
 import { useTutorialState } from "../../Context/tutorialContext";
 import { useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../Context/context";
+import TutorialStart from "../../Components/Tutorial/TutorialStart";
 
 function Tutorial() {
   const { loggedUser } = useGlobalState();
   const { tasks, currentTask } = useTutorialState();
   const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false)
+
 
   return (
     <main className="tutorial-container">
@@ -16,7 +19,7 @@ function Tutorial() {
         <h1>Tutorial</h1>
         <hr />
       </div>
-      {currentTask < tasks.length ? (
+      {toggle ? (currentTask < tasks.length ? (
         <section className="tutorial-section">
           <Steps />
         </section>
@@ -31,7 +34,7 @@ function Tutorial() {
             Registrarme
           </button>}
         </div>
-      )}
+      )) : <TutorialStart toggleSwitch={()=>setToggle(!toggle)}/>}
     </main>
   );
 }
