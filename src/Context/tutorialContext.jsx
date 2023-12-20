@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import Insertion from "../Components/Tutorial/Insertion";
 import validateInput from "../utils/validation";
+import DragAndDropContainer from "../Components/Tutorial/Dnd";
 
 const TutorialContext = createContext();
 
@@ -8,6 +9,12 @@ const TutorialProvider = ({ children }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [isStepValid, setIsStepValid] = useState(true);
   const [currentTask, setCurrentTask] = useState(0);
+  const items = [{ id: 1, text: "Hola" }];
+  const [isDragClicked, setIsDragClicked] = useState(false);
+
+  const handleTaskChange = () => {
+    setCurrentTask((prev) => prev + 1);
+  };
 
   const registerSteps = [
     { type: "text", label: "Nombre" },
@@ -22,9 +29,9 @@ const TutorialProvider = ({ children }) => {
     { type: "password", label: "Password" },
     { type: "finished", label: "Completado" },
     //Without the empty objects it throws an error. Has to be the same length as regsteps
-    { },
-    { },
-    { },
+    {},
+    {},
+    {},
   ];
 
   function handleStepSubmit(input, type) {
@@ -44,27 +51,41 @@ const TutorialProvider = ({ children }) => {
     setCurrentStep(0);
   }
 
-  const tasksReg = 
-    {
-      step: "Registro",
-      component: <Insertion name={registerSteps[currentStep].label} type={registerSteps[currentStep].type}
-      onSubmit={handleStepSubmit}
-      isValid={isStepValid}/>,
-    }
-  
-  const taskLogin = 
-    {
-      step: "Login",
-      component: <Insertion name={loginSteps[currentStep].label} type={loginSteps[currentStep].type}
-      onSubmit={handleStepSubmit}
-      isValid={isStepValid}/>,
-    }
+  const tasksReg = {
+    step: "Registro",
+    component: (
+      <Insertion
+        name={registerSteps[currentStep].label}
+        type={registerSteps[currentStep].type}
+        onSubmit={handleStepSubmit}
+        isValid={isStepValid}
+      />
+    ),
+  };
 
+  const taskLogin = {
+    step: "Login",
+    component: (
+      <Insertion
+        name={loginSteps[currentStep].label}
+        type={loginSteps[currentStep].type}
+        onSubmit={handleStepSubmit}
+        isValid={isStepValid}
+      />
+    ),
+  };
 
-  const tasks = [
-    tasksReg,
-    taskLogin,
-  ];
+  const taskDrag = {
+    step: window.innerWidth>768 ? "Movimiento" : "Clicks",
+    component: (
+      <DragAndDropContainer
+        items={items}
+        onStepChange={handleTaskChange}
+      />
+    ),
+  };
+
+  const tasks = [taskDrag, tasksReg, taskLogin];
 
   return (
     <TutorialContext.Provider
@@ -77,6 +98,10 @@ const TutorialProvider = ({ children }) => {
         registerSteps,
         loginSteps,
         handleCompleted,
+        handleTaskChange,
+        items,
+        isDragClicked,
+        setIsDragClicked
       }}
     >
       {children}
