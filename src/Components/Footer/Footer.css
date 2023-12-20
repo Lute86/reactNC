@@ -40,3 +40,16 @@ p{
 .footer-logo{
   font-size: x-large;
 }
+
+@media screen and (max-width:500px) {
+  .footer-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .column{
+    padding: 1rem 0rem;
+  }
+  .footer-social-logos li{
+    padding: 1rem;
+  }
+}
