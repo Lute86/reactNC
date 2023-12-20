@@ -126,3 +126,71 @@
 .tutorial-switch h3 {
   margin-bottom: 2rem;
 }
+
+/* Drag */
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.drag-container {
+  height: 200px;
+  width: 300px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.drag-container-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.draggable-item {
+  text-align: center;
+  border: 1px solid black;
+  height: 1.5rem;
+  width: 4.5rem;
+  font-size: small;
+  cursor: move;
+  background-color: var(--clr-main-4);
+  animation: ping 1s ease infinite;
+}
+
+.draggable-item-dragging {
+  opacity: 0.5;
+  animation: none; /* Disable animation while dragging */
+}
+
+.draggable-item:hover{
+  animation: none;
+}
+
+.drop-area {
+  position: inherit;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid;
+  margin-top: 1rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+
+.drop-area-over {
+  background-color: var(--clr-dark-font-4);
+}
+
+.drop-area-not-over {
+  background-color: var(--clr-grey-slate);
+}
