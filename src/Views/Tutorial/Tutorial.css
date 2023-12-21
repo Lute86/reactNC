@@ -194,3 +194,9 @@
 .drop-area-not-over {
   background-color: var(--clr-grey-slate);
 }
+
+@media screen and (max-width:500px) {
+  .tutorial-switch{
+    margin-bottom: 3rem;
+  }
+}
